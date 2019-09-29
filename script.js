@@ -19,40 +19,83 @@ const equal = document.querySelector('.equal');
 
 
 
-let flag = false;
+let flag = '';
 let content = '', swap;
 
 // operations
 
 plus.addEventListener('click', () => {
   swap = parseInt(display.innerHTML);
-  // content = '+';
-  flag = true;
+  flag = 'plus';
   content = '';
 
   display.innerHTML = content;
 });
 
-equal.addEventListener('click', () => {
-  if(flag === true){
-    content = parseInt(display.innerHTML);
-    display.innerHTML = swap + content;
-  }
+minus.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'minus';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+multiply.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'multiply';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+divide.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'divide';
+  content = '';
+
+  display.innerHTML = content;
 });
 
 
-
-
-
-
-
-
+equal.addEventListener('click', () => {
+  process();
+});
 
 c.addEventListener('click', () => {
   content = '';
 
   display.innerHTML = content;
 });
+
+//functions
+
+function process() {
+  if(flag === 'plus'){
+    content = parseInt(display.innerHTML);
+    display.innerHTML = swap + content;
+    flag = '';
+    swap = '';
+    content = '';
+  } else if (flag === 'minus') {
+    content = parseInt(display.innerHTML);
+    display.innerHTML = swap - content;
+    flag = '';
+    swap = '';
+    content = '';
+  } else if (flag === 'multiply') {
+    content = parseInt(display.innerHTML);
+    display.innerHTML = swap * content;
+    flag = '';
+    swap = '';
+    content = '';
+  } else if (flag === 'divide') {
+    content = parseInt(display.innerHTML);
+    display.innerHTML = swap / content;
+    flag = '';
+    swap = '';
+    content = '';
+  }
+}
 
 function validator(nums) {
   if (display.lenght) {
@@ -66,58 +109,68 @@ num0.addEventListener('click', () => {
   content += '0';
   
   display.innerHTML = content;
+  process();
 });
 
 num1.addEventListener('click', () => {
     content += '1';
   
   display.innerHTML = content;
+  process();
 });
 
 num2.addEventListener('click', () => {
   content += '2';
   
   display.innerHTML = content;
+  process();
 });
 
 num3.addEventListener('click', () => {
   content += '3';
   
   display.innerHTML = content;
+  process();
 });
 
 num4.addEventListener('click', () => {
   content += '4';
   
   display.innerHTML = content;
+  process();
 });
 
 num5.addEventListener('click', () => {
   content += '5';
   
   display.innerHTML = content;
+  process();
 });
 
 num6.addEventListener('click', () => {
   content += '6';
   
   display.innerHTML = content;
+  process();
 });
 
 num7.addEventListener('click', () => {
   content += '7';
   
   display.innerHTML = content;
+  process();
 });
 
 num8.addEventListener('click', () => {
   content += '8';
   
   display.innerHTML = content;
+  process();
 });
 
 num9.addEventListener('click', () => {
   content += '9';
   
   display.innerHTML = content;
+  process();
 });
