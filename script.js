@@ -20,10 +20,25 @@ const equal = document.querySelector('.equal');
 
 
 let flag = false;
-let content = '', swwap;
+let content = '', swap;
 
 // operations
 
+plus.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  // content = '+';
+  flag = true;
+  content = '';
+
+  display.innerHTML = content;
+});
+
+equal.addEventListener('click', () => {
+  if(flag === true){
+    content = parseInt(display.innerHTML);
+    display.innerHTML = swap + content;
+  }
+});
 
 
 

@@ -49,7 +49,7 @@ h1{
     border-radius: 0 0 0 15px;
 }
 
-.numEqual {
+.equal {
   
     width: 270px;
     height: 90px;
@@ -81,7 +81,7 @@ h1{
 /* 
         Interactions
 */
-.numEqual:hover {
+.equal:hover {
     transform: scale(.95);
     
 }
