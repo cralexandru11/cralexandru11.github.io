@@ -90,7 +90,7 @@ h1{
     background: rgb(245, 212, 212);
     color: #fff;
 
-    transition: transform cubic-bezier(.66,-1.51,.17,1.55) .6s;
+    transition: transform .6s;
 
     /* border-radius: 10px; */
     transform: scale(.9);

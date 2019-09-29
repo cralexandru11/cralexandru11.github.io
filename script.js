@@ -10,6 +10,34 @@ const num7 = document.querySelector('.num7');
 const num8 = document.querySelector('.num8');
 const num9 = document.querySelector('.num9');
 const c = document.querySelector('.c');
+const ce = document.querySelector('.ce');
+const divide = document.querySelector('.divide');
+const multiply = document.querySelector('.multiply');
+const plus = document.querySelector('.plus');
+const minus = document.querySelector('.minus');
+const equal = document.querySelector('.equal');
+
+
+
+let flag = false;
+let content = '', swwap;
+
+// operations
+
+
+
+
+
+
+
+
+
+
+c.addEventListener('click', () => {
+  content = '';
+
+  display.innerHTML = content;
+});
 
 function validator(nums) {
   if (display.lenght) {
@@ -18,47 +46,63 @@ function validator(nums) {
 }
 
 
+// numbers
 num0.addEventListener('click', () => {
-  display.innerHTML += 0;
+  content += '0';
+  
+  display.innerHTML = content;
 });
 
 num1.addEventListener('click', () => {
-    display.innerHTML += 1;
+    content += '1';
+  
+  display.innerHTML = content;
 });
 
 num2.addEventListener('click', () => {
-  display.innerHTML += 2;
+  content += '2';
+  
+  display.innerHTML = content;
 });
 
 num3.addEventListener('click', () => {
-  display.innerHTML += 3;
+  content += '3';
+  
+  display.innerHTML = content;
 });
 
 num4.addEventListener('click', () => {
-  display.innerHTML += 4;
+  content += '4';
+  
+  display.innerHTML = content;
 });
 
 num5.addEventListener('click', () => {
-  display.innerHTML += 5;
+  content += '5';
+  
+  display.innerHTML = content;
 });
 
 num6.addEventListener('click', () => {
-  display.innerHTML += 6;
+  content += '6';
+  
+  display.innerHTML = content;
 });
 
 num7.addEventListener('click', () => {
-  display.innerHTML += 7;
+  content += '7';
+  
+  display.innerHTML = content;
 });
 
 num8.addEventListener('click', () => {
-  display.innerHTML += 8;
+  content += '8';
+  
+  display.innerHTML = content;
 });
 
 num9.addEventListener('click', () => {
-  display.innerHTML += 9;
-});
-
-
-c.addEventListener('click', () => {
-  display.innerHTML = '';
+  content += '9';
+  
+  display.innerHTML = content;
 });
