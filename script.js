@@ -1,4 +1,5 @@
 const display = document.querySelector('#display');
+
 const num0 = document.querySelector('.num0');
 const num1 = document.querySelector('.num1');
 const num2 = document.querySelector('.num2');
@@ -9,6 +10,7 @@ const num6 = document.querySelector('.num6');
 const num7 = document.querySelector('.num7');
 const num8 = document.querySelector('.num8');
 const num9 = document.querySelector('.num9');
+
 const c = document.querySelector('.c');
 const ce = document.querySelector('.ce');
 const divide = document.querySelector('.divide');
@@ -17,6 +19,7 @@ const plus = document.querySelector('.plus');
 const minus = document.querySelector('.minus');
 const equal = document.querySelector('.equal');
 
+const header = document.querySelector('h1');
 
 
 let flag = '';
@@ -68,6 +71,19 @@ c.addEventListener('click', () => {
 });
 
 //functions
+let click = true;
+header.addEventListener('click', () =>{
+  if (click === true) {
+    document.querySelector('.buttons').style.opacity = '0';
+    document.querySelector('#display').style.opacity = '0';
+    click = false;
+  } else if (click === false){
+    document.querySelector('.buttons').style.opacity = '1';
+    document.querySelector('#display').style.opacity = '1';
+    click = true;
+  }
+  
+})
 
 function process() {
   if(flag === 'plus'){

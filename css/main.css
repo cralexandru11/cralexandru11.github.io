@@ -20,6 +20,7 @@ h1{
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .2em;
+    cursor: pointer;
 }
 
 #display {
@@ -79,6 +80,21 @@ h1{
     outline: none;
     border: 1px solid silver;
 }
+
+.buttons,
+#display {
+    transition: .7s opacity cubic-bezier(0,0,.32,.99);
+}
+
+*{
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
 
 /* 
         Interactions
