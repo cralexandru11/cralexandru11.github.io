@@ -22,53 +22,11 @@ const equal = document.querySelector('.equal');
 const header = document.querySelector('h1');
 
 
-let flag = '';
-let content = '', swap;
+let flag = '', content = '0', swap;
 
-// operations
+//startup
+display.innerHTML = content;
 
-plus.addEventListener('click', () => {
-  swap = parseInt(display.innerHTML);
-  flag = 'plus';
-  content = '';
-
-  display.innerHTML = content;
-});
-
-minus.addEventListener('click', () => {
-  swap = parseInt(display.innerHTML);
-  flag = 'minus';
-  content = '';
-
-  display.innerHTML = content;
-});
-
-multiply.addEventListener('click', () => {
-  swap = parseInt(display.innerHTML);
-  flag = 'multiply';
-  content = '';
-
-  display.innerHTML = content;
-});
-
-divide.addEventListener('click', () => {
-  swap = parseInt(display.innerHTML);
-  flag = 'divide';
-  content = '';
-
-  display.innerHTML = content;
-});
-
-
-equal.addEventListener('click', () => {
-  process();
-});
-
-c.addEventListener('click', () => {
-  content = '';
-
-  display.innerHTML = content;
-});
 
 //functions
 let click = true;
@@ -112,81 +70,142 @@ function process() {
     content = '';
   }
 }
-
-function validator(nums) {
-  if (display.lenght) {
-    
+//delete first 0
+function notNull(nums) {
+  if (parseInt(nums) === 0) {
+    content = '';
+    display.innerHTML = content;
   }
 }
 
+//prewie
+
+
+// operations
+
+//plus
+plus.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'plus';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+//minus
+minus.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'minus';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+//multiply
+multiply.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'multiply';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+//divide
+divide.addEventListener('click', () => {
+  swap = parseInt(display.innerHTML);
+  flag = 'divide';
+  content = '';
+
+  display.innerHTML = content;
+});
+
+//equal
+equal.addEventListener('click', () => {
+  process();
+});
+
+//clear
+c.addEventListener('click', () => {
+  content = '0';
+
+  display.innerHTML = content;
+});
+
+//clear all
+ce.addEventListener('click', () => {
+  content = '0';
+  swap = '';
+
+  display.innerHTML = content;
+});
 
 // numbers
-num0.addEventListener('click', () => {
+num0.addEventListener('click', () => {  
+  notNull(content);
   content += '0';
-  
+
   display.innerHTML = content;
-  process();
 });
 
-num1.addEventListener('click', () => {
-    content += '1';
+num1.addEventListener('click', () => { 
+  notNull(content);
+  content += '1';
   
   display.innerHTML = content;
-  process();
 });
 
-num2.addEventListener('click', () => {
+num2.addEventListener('click', () => {  
+  notNull(content);
   content += '2';
   
   display.innerHTML = content;
-  process();
 });
 
-num3.addEventListener('click', () => {
+num3.addEventListener('click', () => {  
+  notNull(content);
   content += '3';
   
   display.innerHTML = content;
-  process();
 });
 
-num4.addEventListener('click', () => {
+num4.addEventListener('click', () => {  
+  notNull(content);
   content += '4';
   
   display.innerHTML = content;
-  process();
 });
 
-num5.addEventListener('click', () => {
+num5.addEventListener('click', () => {  
+  notNull(content);
   content += '5';
   
   display.innerHTML = content;
-  process();
 });
 
-num6.addEventListener('click', () => {
+num6.addEventListener('click', () => {  
+  notNull(content);
   content += '6';
   
   display.innerHTML = content;
-  process();
 });
 
-num7.addEventListener('click', () => {
+num7.addEventListener('click', () => {  
+  notNull(content);
   content += '7';
   
   display.innerHTML = content;
-  process();
 });
 
-num8.addEventListener('click', () => {
+num8.addEventListener('click', () => {  
+  notNull(content);
   content += '8';
   
   display.innerHTML = content;
-  process();
 });
 
-num9.addEventListener('click', () => {
+num9.addEventListener('click', () => {  
+  notNull(content);
   content += '9';
   
   display.innerHTML = content;
-  process();
 });
