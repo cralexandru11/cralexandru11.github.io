@@ -13,6 +13,7 @@ const num9 = document.querySelector('.num9');
 
 const c = document.querySelector('.c');
 const ce = document.querySelector('.ce');
+const backspace = document.querySelector('.backspace');
 const divide = document.querySelector('.divide');
 const multiply = document.querySelector('.multiply');
 const plus = document.querySelector('.plus');
@@ -20,6 +21,7 @@ const minus = document.querySelector('.minus');
 const equal = document.querySelector('.equal');
 
 const header = document.querySelector('h1');
+
 
 
 let flag = '', content = '0', swap;
@@ -138,6 +140,13 @@ ce.addEventListener('click', () => {
 
   display.innerHTML = content;
 });
+
+backspace.addEventListener('click', () => {
+  content = parseInt(content / 10);
+
+
+  display.innerHTML = content;
+})
 
 // numbers
 num0.addEventListener('click', () => {  
