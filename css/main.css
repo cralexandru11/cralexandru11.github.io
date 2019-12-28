@@ -1,6 +1,10 @@
 body{
     font-family: 'Quicksand', sans-serif;
     background-color: rgba(0, 0, 0, 1);
+    background-image: url(bg.jpg);
+    background-position: fixed;
+    background-size: cover;
+
     color: bisque;
 
     display: flex;
@@ -23,9 +27,20 @@ h1{
     cursor: pointer;
 }
 
+.shadow {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 15px;
+    
+    box-shadow: 4px 4px 18px 4px rgba(0,0,0,0.6);
+}
+
 #display {
     background: rgb(162, 231, 222);
     height: 70px;
+    
+
     padding-top: 20px;
     padding-left: 10px;
     color: #000;
