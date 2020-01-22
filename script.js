@@ -1,5 +1,4 @@
 const display = document.querySelector('#display');
-const shadow = document.querySelector('.shadow')
 
 const num0 = document.querySelector('.num0');
 const num1 = document.querySelector('.num1');
@@ -35,17 +34,12 @@ display.innerHTML = content;
 let click = true;
 header.addEventListener('click', () =>{
   if (click === true) {
-    // document.querySelector('.buttons').style.opacity = '0';
-    // document.querySelector('#display').style.opacity = '0';
-    document.querySelector('.shadow').style.opacity = '0';
-
+    document.querySelector('.buttons').style.opacity = '0';
+    document.querySelector('#display').style.opacity = '0';
     click = false;
   } else if (click === false){
-    // document.querySelector('.buttons').style.opacity = '1';
-    // document.querySelector('#display').style.opacity = '1';
-    
-    document.querySelector('.shadow').style.opacity = '1';
-
+    document.querySelector('.buttons').style.opacity = '1';
+    document.querySelector('#display').style.opacity = '1';
     click = true;
   }
   
