@@ -1,4 +1,5 @@
 const display = document.querySelector('#display');
+const tempDisplay = document.querySelector('#tempDisplay');
 
 const num0 = document.querySelector('.num0');
 const num1 = document.querySelector('.num1');
@@ -34,12 +35,10 @@ display.innerHTML = content;
 let click = true;
 header.addEventListener('click', () =>{
   if (click === true) {
-    document.querySelector('.buttons').style.opacity = '0';
-    document.querySelector('#display').style.opacity = '0';
+    document.querySelector('.shadow').style.opacity = '0';
     click = false;
   } else if (click === false){
-    document.querySelector('.buttons').style.opacity = '1';
-    document.querySelector('#display').style.opacity = '1';
+    document.querySelector('.shadow').style.opacity = '1';
     click = true;
   }
   
@@ -74,6 +73,11 @@ function process() {
 }
 //delete first 0
 function notNull(nums) {
+  //rearange display
+  
+  document.querySelector('#display').style = 'transform: translateY(0px); opacity: 1; transition: .4s;';
+  document.querySelector('#tempDisplay').style = 'transform: translateY(0px); transition: .4s;';
+
   if (parseInt(nums) === 0) {
     content = '';
     display.innerHTML = content;
@@ -124,6 +128,9 @@ divide.addEventListener('click', () => {
 //equal
 equal.addEventListener('click', () => {
   process();
+  document.querySelector('#display').style = 'transform: translateY(-40px); opacity: 0; transition: .4s;';
+  document.querySelector('#tempDisplay').style = 'transform: translateY(-40px); transition: .4s;';
+  
 });
 
 //clear
