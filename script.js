@@ -29,6 +29,7 @@ let flag = '', content = '0', swap;
 
 //startup
 display.innerHTML = content;
+tempDisplay.innerHTML = '';
 
 
 //functions
@@ -70,6 +71,23 @@ function process() {
     swap = '';
     content = '';
   }
+}
+
+function tempDisplayShow (){
+  if(flag === 'plus'){
+    content = parseInt(tempDisplay.innerHTML);
+    tempDisplay.innerHTML = swap + content;
+  } else if (flag === 'minus') {
+    content = parseInt(tempDisplay.innerHTML);
+    tempDisplay.innerHTML = swap - content;
+  } else if (flag === 'multiply') {
+    content = parseInt(tempDisplay.innerHTML);
+    tempDisplay.innerHTML = swap * content;
+  } else if (flag === 'divide') {
+    content = parseInt(tempDisplay.innerHTML);
+    tempDisplay.innerHTML = swap / content;
+  }
+
 }
 //delete first 0
 function notNull(nums) {
@@ -136,6 +154,9 @@ equal.addEventListener('click', () => {
 //clear
 c.addEventListener('click', () => {
   content = '0';
+  document.querySelector('#display').style = 'transform: translateY(0px); opacity: 1; transition: .4s;';
+  document.querySelector('#tempDisplay').style = 'transform: translateY(0px); transition: .4s;';
+  tempDisplay.innerHTML = '';
 
   display.innerHTML = content;
 });
@@ -144,6 +165,9 @@ c.addEventListener('click', () => {
 ce.addEventListener('click', () => {
   content = '0';
   swap = '';
+  document.querySelector('#display').style = 'transform: translateY(0px); opacity: 1; transition: .4s;';
+  document.querySelector('#tempDisplay').style = 'transform: translateY(0px); transition: .4s;';
+  tempDisplay.innerHTML = '';
 
   display.innerHTML = content;
 });
@@ -159,69 +183,89 @@ backspace.addEventListener('click', () => {
 num0.addEventListener('click', () => {  
   notNull(content);
   content += '0';
+  tempDisplay.innerHTML = content;
 
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num1.addEventListener('click', () => { 
   notNull(content);
   content += '1';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num2.addEventListener('click', () => {  
   notNull(content);
   content += '2';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num3.addEventListener('click', () => {  
   notNull(content);
   content += '3';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num4.addEventListener('click', () => {  
   notNull(content);
   content += '4';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num5.addEventListener('click', () => {  
   notNull(content);
   content += '5';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num6.addEventListener('click', () => {  
   notNull(content);
   content += '6';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num7.addEventListener('click', () => {  
   notNull(content);
   content += '7';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num8.addEventListener('click', () => {  
   notNull(content);
   content += '8';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
 
 num9.addEventListener('click', () => {  
   notNull(content);
   content += '9';
+  tempDisplay.innerHTML = content;
   
   display.innerHTML = content;
+  tempDisplayShow ();
 });
